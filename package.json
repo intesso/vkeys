@@ -1,0 +1,30 @@
+{
+  "name": "vkeys",
+  "version": "1.0.0",
+  "description": "map e.keyCode to vkey string",
+  "main": "vkeys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/build-convert.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intesso/vkeys.git"
+  },
+  "keywords": [
+    "keyCode",
+    "mapping",
+    "key",
+    "keyboard",
+    "definition"
+  ],
+  "author": "Andi Neck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/intesso/vkeys/issues"
+  },
+  "homepage": "https://github.com/intesso/vkeys",
+  "devDependencies": {
+    "vkey": "^1.0.0"
+  }
+}
