@@ -1,4 +1,4 @@
-module.exports = {
+var vkeys = exports = module.exports = {
   0: 'unk',
   1: 'mouse1',
   2: 'mouse2',
@@ -178,4 +178,26 @@ module.exports = {
   252: 'noname',
   253: 'pa1',
   254: 'clear'
+};
+
+exports.findCode = function findCode(key) {
+  for (var k in vkeys) {
+    if(vkeys.hasOwnProperty(k)) {
+      if (key == vkeys[k]) return parseInt(k);
+    }
+  }
+  return null;
+};
+
+exports.findAllCodes = function findAllCodes(key) {
+  var codes = Object.keys(vkeys).filter(function (k) {
+    return (key == vkeys[k]);
+  });
+  return codes.map(function(code) {
+    return parseInt(code);
+  })
+};
+
+exports.getKey = function getKey(code) {
+  return vkeys[code];
 };

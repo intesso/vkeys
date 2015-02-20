@@ -16,5 +16,5 @@ function toString(obj) {
   for (prop in obj) {
     buff.push("'" + convert(prop) + "'" + ': ' + obj[prop])
   }
-  return 'module.exports = {\n  ' + buff.join(',\n  ') + '\n};';
+  return 'var vkeys = module.exports = {\n  ' + buff.join(',\n  ') + '\n};';
 }

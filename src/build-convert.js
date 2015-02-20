@@ -8,7 +8,8 @@ Object.keys(vkey).forEach(function(key) {
   converted[key] = value
 });
 
-fs.writeFileSync('vkeys.js', toString(converted) ,'utf-8');
+var utils = fs.readFileSync(__dirname + '/utils.js', 'utf-8');
+fs.writeFileSync('vkeys.js', toString(converted) + utils ,'utf-8');
 
 function toString(obj) {
   var buff, prop;
@@ -16,5 +17,5 @@ function toString(obj) {
   for (prop in obj) {
     buff.push(prop + ': \'' + convert(obj[prop]) + '\'')
   }
-  return 'module.exports = {\n  ' + buff.join(',\n  ') + '\n};';
+  return 'var vkeys = exports = module.exports = {\n  ' + buff.join(',\n  ') + '\n};';
 }
