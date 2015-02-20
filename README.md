@@ -34,6 +34,48 @@ window.addEventListener('keydown', function(e) {
 });
 ```
 
+# api
+
+#### vkeys
+
+Object with {`code` : `key`} pairs.
+```js
+{
+  0: 'unk',
+  ...
+  8: 'backspace',
+  9: 'tab',
+  12: 'clear',
+  13: 'enter',
+  ...
+  254: 'clear'
+}
+```
+see: [vkeys.js](https://github.com/intesso/vkeys/blob/master/vkeys.js)
+
+#### vkeys.getKey(code)
+
+return the `key` for the given `code`.
+```js
+var key = vkeys.getKey(60);
+assert.equal(key, '<');
+```
+#### vkeys.findCode(key)
+
+returns the first `code` that matches the `key`.
+```js
+var code = vkeys.findCode('space');
+assert.equal(code, 32);
+```
+
+#### vkeys.findAllCodes(key)
+
+returns an Array of `code`'s that match the `key`.
+```js
+var code = vkeys.findAllCodes('meta');
+// code equals [91, 92, 223, 224]
+```
+
 
 # build
 
