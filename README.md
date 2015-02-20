@@ -40,12 +40,12 @@ window.addEventListener('keydown', function(e) {
  1. get the latest vkey module: `npm install --save-dev vkey`
  2. run the build: `npm run build`
 
- # test
+# test
 
- ```bash
- npm install -g browserify testling
- npm run test
- ```
+```bash
+npm install -g browserify testling
+npm run test
+```
 
 # license
 
