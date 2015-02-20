@@ -1,6 +1,6 @@
 {
   "name": "vkeys",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "map e.keyCode to vkey string",
   "main": "vkeys.js",
   "scripts": {
